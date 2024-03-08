@@ -12,7 +12,7 @@ function searchMovie() {
     
     resultContainer.innerHTML = "cargando... ";
 
-    fetch(`${urlBase}?query=${searchInput}&api_key=${api_key}`)
+    fetch(`${urlBase}?query=${searchInput}&api_key=${api_key}&language=es-MX`)
     .then(response => response.json())
     .then(response =>{
         displayMovies(response.results)
